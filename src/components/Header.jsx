@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'; /* import prop types impt */
+import { Link } from 'react-router-dom';
 
 function Header({text = 'Feedback UI', bgColor = 'rgba(0,0,0,0.4)', textColor = '#ff6a95'}) {
 
@@ -10,7 +11,9 @@ function Header({text = 'Feedback UI', bgColor = 'rgba(0,0,0,0.4)', textColor = 
   return (
     <header style={headerStyles}>
       <div className='container'>
-        <h2>{text}</h2>
+        <Link to='/' style={{ textDecoration: 'none' }}>
+          <h2>{text}</h2>
+        </Link>
       </div>
     </header>
   )
